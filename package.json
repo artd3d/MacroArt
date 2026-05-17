@@ -12,7 +12,7 @@
     "test": "vitest run",
     "build": "npm run typecheck && electron-vite build",
     "prepare:automation": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/fetch-autohotkey.ps1",
-    "dist": "npm run prepare:automation && npm run build && electron-builder --win nsis --x64"
+    "dist": "npm run prepare:automation && npm run build && electron-builder --win --x64"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
@@ -64,6 +64,12 @@
           "arch": [
             "x64"
           ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "requestedExecutionLevel": "asInvoker"
@@ -77,6 +83,9 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "MacroArt"
+    },
+    "portable": {
+      "artifactName": "MacroArt Portable ${version}.${ext}"
     }
   }
 }
