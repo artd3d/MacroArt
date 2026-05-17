@@ -36,3 +36,7 @@ npm run dist
 - `release/MacroArt Portable 0.1.0.exe` — standalone portable executable.
 
 The packaged app includes `resources/automation/send-hotkey.ahk`. `npm run dist` first runs `scripts/fetch-autohotkey.ps1`, which downloads `AutoHotkey64.exe` into `resources/automation/` so the installer does not depend on a global AutoHotkey install. If the helper is missing during development, MacroArt falls back to Windows PowerShell/WScript SendKeys for basic non-Windows-key shortcuts.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
